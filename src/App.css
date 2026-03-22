@@ -13,11 +13,13 @@
 }
 
 .app {
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 /* Tabs */
@@ -78,6 +80,8 @@
 
 .num-input {
   flex: 1;
+  min-width: 0;
+  width: 0;
   height: var(--input-h);
   background: var(--surface);
   border: 1px solid #2a2a2a;
@@ -85,7 +89,7 @@
   color: var(--text);
   font-size: var(--font-size-input);
   font-weight: 600;
-  padding: 0 16px;
+  padding: 0 12px;
   outline: none;
   -moz-appearance: textfield;
 }
@@ -106,7 +110,8 @@
 }
 
 .mode-btn {
-  width: 64px;
+  flex-shrink: 0;
+  width: var(--input-h);
   height: var(--input-h);
   border-radius: var(--radius);
   border: 1px solid #2a2a2a;
